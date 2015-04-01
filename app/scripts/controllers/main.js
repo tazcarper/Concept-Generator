@@ -1,13 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name v2App.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the v2App
- */
-angular.module('v2App')
+angular.module('volcanic-app')
   .controller('MainCtrl', function ($scope) {
   	$scope.pageClass = 'page-main';
   

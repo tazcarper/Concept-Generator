@@ -1,7 +1,15 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
+
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "animations.scss";
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+$orange: #e16628;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -11,24 +19,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 body {
   padding: 0;
- overflow-y: scroll;
+  overflow-y: scroll;
+  background: #ddd;
+  overflow-x: hidden;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
+.header, .marketing, .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -45,7 +52,6 @@ body {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -70,44 +76,107 @@ body {
   }
 }
 // animations
-.page        {
-    bottom:0; 
-    margin-top:73px;
-    position:absolute; 
-   
-    top:0;  
-    width:100%; 
+.page {
+  bottom: 0;
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  -webkit-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.main {
+  text-align: center;
+
+  img {
+    margin-top: -14px;
+  }
+  .btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: $orange;
+    color: white;
+    font-size: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    outline: none !important;
+
+    &:hover {
+      background-color: darken($orange, 5%);
+      color: white;
+    }
+    &:active {
+      box-shadow: 3px black;
+      -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 1);
+      box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 1);
+    }
+  }
+}
+.game {
+  border:5px solid white;
+  background:$orange;
+   @include transition(all, 0.2s, ease-in-out);
+   &:hover {
+    background:darken($orange,10%);
+    cursor: pointer;
+   }
+  h1,h2 {
+    color: white;
+    margin:0;
+  }
+  h1 {
+    margin-bottom: 2px;
+    margin-top: 15px;
+  }
+  h2 {
+    margin-top: 0px;
+    font-size:20px;
+    padding-bottom: 15px;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-@keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
+.game-detail {
+  .back {
+    margin-top: 20px;
+  }
 }
-@keyframes slideInRight {
-    from    { transform:translateX(100%); }
-    to      { transform: translateX(0); }
-}
-
-
- .page.ng-enter       { z-index: 8888; animation:slideInRight 0.5s both ease-in;  position: absolute;}
- .page.ng-leave       { z-index: 9999; animation:slideOutLeft 0.5s both ease-in;}
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width:768px) {
   .container {
-    max-width: 730px;
+    // max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
+  .header, .marketing, .footer {
     padding-left: 0;
     padding-right: 0;
   }
+
   /* Space out the masthead */
   .header {
-   // margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
