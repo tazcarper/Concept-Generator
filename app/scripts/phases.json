@@ -1,0 +1,33 @@
+[
+{
+    "phase": "planning",
+    "about": "Non duis ut occaecat irure aute aliquip. Cupidatat aliquip commodo nostrud veniam. Consectetur laboris enim enim in est ut non laboris esse sunt commodo. Cupidatat mollit reprehenderit ut ipsum. Sit eu veniam qui voluptate exercitation tempor eu ipsum sit consequat. Qui nisi ipsum nisi quis ullamco. Officia esse dolor cupidatat dolor dolor dolore eiusmod eiusmod quis Lorem.\r\n",
+    "color":"purple"
+
+},
+{
+    "phase": "exploring",
+    "about": "Non duis ut occaecat irure aute aliquip. Cupidatat aliquip commodo nostrud veniam. Consectetur laboris enim enim in est ut non laboris esse sunt commodo. Cupidatat mollit reprehenderit ut ipsum. Sit eu veniam qui voluptate exercitation tempor eu ipsum sit consequat. Qui nisi ipsum nisi quis ullamco. Officia esse dolor cupidatat dolor dolor dolore eiusmod eiusmod quis Lorem.\r\n",
+    "color":"red"
+
+},
+{
+    "phase": "analyzing",
+    "about": "Non duis ut occaecat irure aute aliquip. Cupidatat aliquip commodo nostrud veniam. Consectetur laboris enim enim in est ut non laboris esse sunt commodo. Cupidatat mollit reprehenderit ut ipsum. Sit eu veniam qui voluptate exercitation tempor eu ipsum sit consequat. Qui nisi ipsum nisi quis ullamco. Officia esse dolor cupidatat dolor dolor dolore eiusmod eiusmod quis Lorem.\r\n",
+    "color":"red"
+
+},
+{
+    "phase": "brainstorming",
+    "about": "Non duis ut occaecat irure aute aliquip. Cupidatat aliquip commodo nostrud veniam. Consectetur laboris enim enim in est ut non laboris esse sunt commodo. Cupidatat mollit reprehenderit ut ipsum. Sit eu veniam qui voluptate exercitation tempor eu ipsum sit consequat. Qui nisi ipsum nisi quis ullamco. Officia esse dolor cupidatat dolor dolor dolore eiusmod eiusmod quis Lorem.\r\n",
+    "color":"red"
+
+},
+{
+    "phase": "phase_5",
+    "about": "Non duis ut occaecat irure aute aliquip. Cupidatat aliquip commodo nostrud veniam. Consectetur laboris enim enim in est ut non laboris esse sunt commodo. Cupidatat mollit reprehenderit ut ipsum. Sit eu veniam qui voluptate exercitation tempor eu ipsum sit consequat. Qui nisi ipsum nisi quis ullamco. Officia esse dolor cupidatat dolor dolor dolore eiusmod eiusmod quis Lorem.\r\n",
+    "color":"red"
+
+}
+
+]

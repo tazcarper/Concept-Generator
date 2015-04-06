@@ -26,7 +26,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 63,
     "category": "solo",
-    "phase": "cat2",
+    "phase": "exploring",
     "tags": [
       "consequat",
       "sunt",
@@ -45,7 +45,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 38,
     "category": "solo",
-    "phase": "cat3",
+    "phase": "analyzing",
     "tags": [
       "magna",
       "dolor",
@@ -83,7 +83,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 48,
     "category": "group",
-    "phase": "cat2",
+    "phase": "exploring",
     "tags": [
       "dolore",
       "nulla",
@@ -121,7 +121,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 30,
     "category": "group",
-    "phase": "cat3",
+    "phase": "analyzing",
     "tags": [
       "nulla",
       "enim",
@@ -140,7 +140,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 53,
     "category": "group",
-    "phase": "cat2",
+    "phase": "exploring",
     "tags": [
       "qui",
       "est",
@@ -159,7 +159,7 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 15,
     "category": "group",
-    "phase": "cat3",
+    "phase": "analyzing",
     "tags": [
       "adipisicing",
       "ut",
@@ -178,7 +178,45 @@
     "picture": "http://placehold.it/32x32",
     "avg_time": 51,
     "category": "outside",
-    "phase": "cat3",
+    "phase": "analyzing",
+    "tags": [
+      "laborum",
+      "laboris",
+      "pariatur",
+      "ex",
+      "laborum",
+      "aute",
+      "aliqua"
+    ]
+  },
+  {
+    "game": "KIGGLEFDFDFD",
+    "about": "Ad enim et nostrud enim ipsum occaecat anim pariatur velit sit culpa est consectetur. Veniam voluptate velit est veniam id exercitation aute id quis deserunt sit mollit consequat. Laboris aute laborum ipsum quis esse tempor est ut commodo ad veniam.\r\n",
+    "index": 10,
+    "isActive": false,
+    "picture": "http://placehold.it/32x32",
+    "avg_time": 51,
+    "category": "outside",
+    "phase": "brainstorming",
+    "tags": [
+      "laborum",
+      "laboris",
+      "pariatur",
+      "ex",
+      "laborum",
+      "aute",
+      "aliqua"
+    ]
+  },
+   {
+    "game": "TTAATTAA",
+    "about": "Ad enim et nostrud enim ipsum occaecat anim pariatur velit sit culpa est consectetur. Veniam voluptate velit est veniam id exercitation aute id quis deserunt sit mollit consequat. Laboris aute laborum ipsum quis esse tempor est ut commodo ad veniam.\r\n",
+    "index": 11,
+    "isActive": false,
+    "picture": "http://placehold.it/32x32",
+    "avg_time": 51,
+    "category": "outside",
+    "phase": "phase_5",
     "tags": [
       "laborum",
       "laboris",
@@ -192,12 +230,12 @@
   {
     "game": "NETERIA",
     "about": "Proident id aliqua velit ullamco culpa adipisicing aute deserunt aliquip et reprehenderit id nisi sunt. Pariatur Lorem ipsum velit nulla duis id qui dolor officia ut sunt pariatur consequat. Aute laboris esse enim est aliquip cupidatat esse in veniam. Do aliqua quis eu ipsum quis velit velit.\r\n",
-    "index": 10,
+    "index": 12,
     "isActive": true,
     "picture": "http://placehold.it/32x32",
     "avg_time": 81,
     "category": "outside",
-    "phase": "cat3",
+    "phase": "analyzing",
     "tags": [
       "incididunt",
       "pariatur",

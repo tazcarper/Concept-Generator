@@ -11,3 +11,10 @@ app.factory('Games', ['$resource',
     });
   }]);
 
+app.factory('Phases', ['$resource',
+  function($resource){
+    return $resource('/scripts/:phase.json', {}, {
+      query: {method:'GET',params:{phase:'phases'},isArray:true}
+    });
+  }]);
+
