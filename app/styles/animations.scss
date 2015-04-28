@@ -1,27 +1,31 @@
+//colors
 $orange: #e16628;
-$purple: #8e2671;
+$purple: #c3389c;
 $red: #ec4863;
-$yellow: darken(#d9ff5b,25%);
+$yellow: darken(#d9ff5b, 25%);
 $blue: #1fa8d1;
 $green: #80cf00;
 $circle-size: 120px;
-$circle-background: #d6dadc;
-$circle-color: #97a71d;
+$circle-background: white;
+$circle-color: white;
 $inset-size: 90px;
 $inset-color: #fbfbfb;
 $transition-length: 1s;
-$shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+$shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 $percentage-color: #97a71d;
 $percentage-font-size: 22px;
 $percentage-text-width: 57px;
 
 .radial-progress {
-  margin: 10px 30px;
+  margin: 0 auto;
   width: $circle-size;
   height: $circle-size;
-  float: left;
+ // float: left;
   background-color: $circle-background;
   border-radius: 50%;
+    -ms-transform: scale(.7,.7); /* IE 9 */
+    -webkit-transform: scale(.7,.7); /* Safari */
+    transform: scale(.7,.7);
 
   .circle {
     .mask, .fill, .shadow {
@@ -31,7 +35,7 @@ $percentage-text-width: 57px;
       border-radius: 50%;
     }
     .shadow {
-      box-shadow: $shadow inset;
+     // box-shadow: $shadow inset;
     }
     .mask, .fill {
       -webkit-backface-visibility: hidden;
@@ -45,21 +49,50 @@ $percentage-text-width: 57px;
 
       .fill {
         clip: rect(0px, $circle-size/2, $circle-size, 0px);
-        background-color: $circle-color;
+        background-color: $orange !important;
       }
     }
   }
+  // .outline {
+  //   .mask, .fill, .shadow {
+  //     width: $circle-size + 4;
+  //     height: $circle-size + 4;
+  //     position: absolute;
+  //     border-radius: 50%;
+  //     z-index: -1;
+  //   }
+  //   .shadow {
+  //    // box-shadow: $shadow inset;
+  //   }
+  //   .mask, .fill {
+  //     -webkit-backface-visibility: hidden;
+  //     transition: -webkit-transform $transition-length;
+  //     transition: -ms-transform $transition-length;
+  //     transition: transform $transition-length;
+  //     border-radius: 50%;
+  //   }
+  //   .mask {
+  //     clip: rect(0px, $circle-size + 4, $circle-size + 4, ($circle-size + 4) /2);
+
+  //     .fill {
+  //       clip: rect(0px, ($circle-size+ 4) /4, $circle-size + 4, 0px);
+  //       background-color: $orange !important;
+  //     }
+  //   }
+  // }
   .inset {
     width: $inset-size;
     height: $inset-size;
     position: absolute;
     margin-left: ($circle-size - $inset-size)/2;
     margin-top: ($circle-size - $inset-size)/2;
-    background-color: $inset-color;
+    background-color: #2f2013;
     border-radius: 50%;
-    // box-shadow: $shadow;
+    box-shadow: $shadow;
   }
+
 }
+
 .purple {
   .circle {
     .mask {

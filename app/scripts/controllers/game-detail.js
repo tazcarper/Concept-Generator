@@ -5,7 +5,7 @@ angular.module('volcanic-app')
     $scope.pageClass = 'page-game-detail';
     $scope.gameName = $routeParams.gameGame;
     $scope.found = true;
-    console.log(myData);
+   
     $scope.game = myData;
     $scope.isSelected = false;
 

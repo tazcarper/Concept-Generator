@@ -9,16 +9,13 @@ angular
     'ngSanitize',
     'ngTouch',
     'navigation',
+    'circle',
     'phaseFilter',
     'getGamesService'
   ])
-  .controller('mainCtrl', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
-  
-
-
-  }])
+ 
   .controller('global', ['$scope', '$http', '$rootScope', '$location', function($scope, $http, $rootScope, $location) {
-    $scope.slide = 1;
+   $scope.pageClass = '';
     //var getLocalGames = localStorage.getItem('selectedGames');
      
     // console.log(localStorage.localSelectedGames)
@@ -28,25 +25,39 @@ angular
     console.log('local storage');
     console.log($scope.selectedGames);
     $scope.currentPhase = '';
-    $scope.sections = ['section1', 'section2', 'section3', 'section4', 'section5'];
+    $scope.phases = ['planning', 'exploring', 'analyzing', 'brainstorming'];
 
-
+    
    
 
-    $scope.fillIn = function(curCircle) {
+    $scope.fillIn = function(curCircle, percent) {
       var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
       console.log($scope.curPhase);
-      var target = '.'+curCircle+'_circle';
+      var target = '.'+curCircle;
+      var bar_percent = percent + '%';
+      $('footer .progress-bar').css({'width':bar_percent});
       console.log('go fill')
       console.log(target);
       var rotation = 180;
       var fill_rotation = rotation;
       var fix_rotation = rotation * 2;
+      $('footer h4').css({'color':'white'});
       for (var i in transform_styles) {
         $(target).addClass('done');
         $(target).find('.circle .fill, .circle .mask.full').css(transform_styles[i], 'rotate(' + fill_rotation + 'deg)');
         $(target).find('.circle .fill.fix').css(transform_styles[i], 'rotate(' + fix_rotation + 'deg)');
+        
       }
+      // for (var i = phase; i > $scope.phases.length; i-- ) {
+      //   var phaseId = $scope.phases[i];
+      //   var bar = '.'+phaseId+'_bar';
+      //   console.log(bar);
+      //   $(bar).css({'width':'100%'});
+      // }
+      var newColor = $(target).find('.circle .mask .fill').css('background-color');
+      $(target).prev('h4').css({'color':newColor});
+      
+      console.log(newColor)
     }
 
     $scope.resetFill = function(){
@@ -58,6 +69,8 @@ angular
         $('.radial-progress').find('.circle .fill, .circle .mask.full').css(transform_styles[i], 'rotate(' + fill_rotation + 'deg)');
         $('.radial-progress').find('.circle .fill.fix').css(transform_styles[i], 'rotate(' + fix_rotation + 'deg)');
       }
+      $('footer .progress-bar').css({'width':'0%'});
+      $('footer h4').css({'color':'white'});
     }
 
     // $('.radial-progress').click(function() {
@@ -101,9 +114,9 @@ angular
           }]
         }
       })
-      .when('/section2', {
-        templateUrl: 'views/section2.html',
-        controller: 'PlanningCtrl'
+      .when('/explorer', {
+        templateUrl: 'views/explorer.html',
+        controller: 'ExplorerCtrl'
       })
       .when('/section3', {
         templateUrl: 'views/section3.html',

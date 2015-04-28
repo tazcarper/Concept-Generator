@@ -12,6 +12,8 @@ angular.module('volcanic-app')
 		$scope.phaseIndex = 0;
 		//console.log($scope.phase.length);
 
+		$('footer').css({'bottom':'0px'});
+
 		// Get current Phase
 		for (var i = 0; i < $scope.phase.length; i++) {
 			var phase = $scope.phase[i].phase;
@@ -27,19 +29,19 @@ angular.module('volcanic-app')
 
 		if ($scope.curPhase.phase == 'planning'){
 		$scope.resetFill();
-		$scope.fillIn($scope.curPhase.phase);
+		$scope.fillIn('purple', 0);
 		}
 		if ($scope.curPhase.phase == 'exploring'){
 		$scope.resetFill();
-		$scope.fillIn($scope.curPhase.phase);
+		$scope.fillIn('red',25);
 		}
 		if ($scope.curPhase.phase == 'analyzing'){
 		$scope.resetFill();
-		$scope.fillIn($scope.curPhase.phase);
+		$scope.fillIn('yellow',50);
 		}
 		if ($scope.curPhase.phase == 'brainstorming'){
 		$scope.resetFill();
-		$scope.fillIn($scope.curPhase.phase);
+		$scope.fillIn('blue',75);
 		}
 
 		// Figure out current phase games
