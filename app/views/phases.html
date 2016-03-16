@@ -8,13 +8,17 @@
   </div>
   <div class="row">
     <div class="col-md-4 game" ng-repeat="game in curGames " >
-      <a ng-href="#/game/{{game.info.game}}" ng-click="goToUrl()" ng-class="{ 'selected' : game.selected == true, 'notSelected' : game.selected == false } ">
+      <a ng-href="#/game/{{game.info.game}}"  ng-class="{ 'selected' : game.selected == true, 'notSelected' : game.selected == false } ">
       	<div class="greenBar" ng-show="{{game.selected}}"></div>
         <h1>{{game.info.game}}</h1>
         <h2>Category: {{game.info.game}}</h2>
 
       </a>
     </div>
-    <a ng-href="#/phases/{{phase[phaseIndex +1].phase}}"><button class="btn default" >Next</button></a>
+   
+    
+  </div>
+  <div class="row">
+    <a ng-href="#/phases/{{phase[phaseIndex +1].phase}}" ><button class="btn default" >Next</button></a>
   </div>
 </div>

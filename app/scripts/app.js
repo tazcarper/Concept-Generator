@@ -143,7 +143,7 @@ angular
             Games.get({
               gameName: path
             }, function(game, s) {
-
+              
             }).$promise.then(
               function(data) {
                 // found game data 
@@ -151,10 +151,11 @@ angular
               },
               function(error) {
                 // couldn't find JSON file
+                console.log('no data');
                 def.resolve(error);
               }
             );
-            console.log(def.promise);
+            //console.log(def.promise);
             return def.promise;
           }]
         }

@@ -6,7 +6,8 @@ var app = angular.module('getGamesService', ['ngResource']);
 
 app.factory('Games', ['$resource',
   function($resource){
-    return $resource('/scripts/:gameName.json', {}, {
+
+    return $resource('/scripts/data.json', {}, {
       query: {method:'GET', params:{gameName:'data'},isArray:true}
     });
   }]);
